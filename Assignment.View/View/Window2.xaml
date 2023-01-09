@@ -1,0 +1,217 @@
+﻿<Window x:Class="Assignment.View.View.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment.View.View"
+        mc:Ignorable="d"
+        Title="Register page" Height="730" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        Background="Silver">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Register Page"
+                      
+                       Foreground="Black"
+                       FontSize="13"
+                       FontFamily="Montserrat"
+                       Grid.Column="0"
+                       VerticalAlignment="Center"
+                       Margin="10,0,0,0"/>
+
+            <Button x:Name="btnClose"
+                    Background="Red"
+                    BorderThickness="0"
+                    Content="X"
+                    Foreground="Red"
+                    FontSize="1"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    Grid.Column="2"
+                    Click="btnClose_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border Width="18" Height="18"
+                                CornerRadius="9"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        <StackPanel Width="250"
+                    Grid.Row="2"
+                    Orientation="Vertical"
+                    Margin="0,35,0,0">
+            <TextBlock Text="FirstName"
+                       Foreground="Black"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,5,0,0"/>
+            <TextBox Name="txtfname"
+                     FontSize="14"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"
+                     Background="Transparent"
+                     Foreground="Black"
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0">
+            </TextBox>
+            <TextBlock Text="LastName"
+                       Foreground="Black"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,35,0,0"/>
+            <TextBox x:Name="txtlname"
+                     FontSize="14"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"
+                     Background="Transparent"
+                     Foreground="Black"
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0">
+              </TextBox>
+            <TextBlock Text="Gender"
+                       Foreground="Black"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,35,0,0"/>
+            <ComboBox x:Name="gender"
+                     FontSize="14"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"
+                     Background="Silver"
+                     Foreground="Black"
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0">
+                <ComboBoxItem>Male</ComboBoxItem>
+                <ComboBoxItem>Female</ComboBoxItem>
+                <ComboBoxItem>Others</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Text="Email"
+                       Foreground="Black"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,35,0,0"/>
+            <TextBox x:Name="email"
+                     FontSize="14"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"
+                     Background="Transparent"
+                     Foreground="Black"
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0">
+            </TextBox>
+            <TextBlock Text="DOB"
+                       Foreground="Black"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,35,0,0"/>
+            <DatePicker x:Name="date"
+                     FontSize="14"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"
+                     Background="Silver"
+                     Foreground="Black" 
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0">
+            </DatePicker>
+            <TextBlock Text="Password"
+                       Foreground="Black"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,35,0,0"/>
+            <PasswordBox x:Name="password"
+                     FontSize="14"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"
+                     Background="Transparent"
+                     Foreground="Black"
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0">
+            </PasswordBox>
+            <TextBlock Text="ConfirmPassword"
+                       Foreground="Black"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,35,0,0"/>
+            <PasswordBox x:Name="cpassword"
+                     FontSize="14"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"
+                     Background="Transparent"
+                     Foreground="Black"
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0">
+            </PasswordBox>
+            <TextBlock Text="{Binding ErrorMessage}"
+                       Foreground="Red"
+                       FontSize="14"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"
+                       Margin="0,35,0,0"
+                       TextWrapping="Wrap"/>
+            <Button x:Name="btnRegister"
+                    BorderThickness="0"
+                    Click="btnRegister_Click"
+                    Content="REGISTER"
+                    Foreground="Black"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    Grid.Column="2"
+                    Margin="10,3,0,0"
+                    Height="35"
+                    Width="100">
+
+            </Button>
+        </StackPanel>
+    </Grid>
+  
+</Window>
